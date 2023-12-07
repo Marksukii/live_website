@@ -1,0 +1,290 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background: #002966;
+  padding: 15px;
+  z-index: 99;
+}
+.logo {
+    font-size: 25px;
+    padding: 0 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+#h2{
+    color: white;
+    margin-top: -50px;
+    margin-right: 9px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+
+
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.menu-title {
+  color: whitesmoke;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+.item a,
+.submenu-item {
+  padding: 20px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+}
+.item i {
+  font-size: 12px;
+}
+.item a{
+  
+}
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background: #002966;
+  display: none;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background: #4070f4;
+  cursor: pointer;
+}
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 100;
+  background: #e7f2fd;
+}
+.main h1 {
+  color: #11101d;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+
+
+/*content*/
+
+
+.main{
+  background-color: ghostwhite;
+  padding: 25px;
+
+  grid-area: main;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "c1 c2 c3 "
+  "c4 c4 c5"
+  "c4 c4 c6"
+  "c4 c4 c7";
+  gap: 20px;
+  padding: 10%;
+}
+
+.card1{
+  background-color: gray;
+  border-radius: 20px;
+  width: 260px;
+  height: 260px;
+  
+}
+.card2{
+  background-color: gray;
+  border-radius: 20px;
+  width: 260px;
+  height: 260px;
+}
+.card3{
+  background-color: gray;
+  border-radius: 20px;
+  width: 260px;
+  height: 260px;
+}
+.card4{
+  background-color: gray;
+  border-radius: 20px;
+  width: 260px;
+  height: 260px;
+}
+#card-image4{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.card-image4 .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card5{
+  background-color: gray;
+  border-radius: 20px;
+  width: 260px;
+  height: 260px;
+}
+.card6{
+  background-color: gray;
+  border-radius: 20px;
+  width: 260px;
+  height: 260px;
+}
+.card7{
+  background-color: gray;
+  border-radius: 20px;
+  width: 260px;
+  height: 260px;
+}
+
+.card:nth-child(1){
+  grid-area: c1;
+}
+.card:nth-child(2){
+  grid-area: c2;
+}
+.card:nth-child(3){
+  grid-area: c3;
+}
+.card:nth-child(4){
+  grid-area: c4;
+}
+.card:nth-child(5){
+  grid-area: c5;
+}
+.card:nth-child(6){
+  grid-area: c6;
+}
+.card:nth-child(7){
+  grid-area: c7;
+}
+
+@media (max-width: 925px){
+  .main{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, 200px);
+      grid-template-areas: initial;
+  }
+
+  .card{
+      grid-area: initial !important;
+  }
+  
+}
+
+.dropdown-content{
+  background-color: #002255;
+  
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+ 
+}
+/* mobile devices */
+@media screen and (max-width: 767px) {
+  
+}
+
+/*malaking mobile devices */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  
+}
+
+/* laptop at desktop */
+@media screen and (min-width: 1024px) {
+  
+}

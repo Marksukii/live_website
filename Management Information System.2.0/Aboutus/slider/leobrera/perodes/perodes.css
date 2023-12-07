@@ -1,0 +1,102 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif; 
+}
+body
+{
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: white;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.container .left{
+    position: relative;
+    background-color: navy;
+    padding: 40px;
+}
+.profileText
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.profileImg img{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover
+}
+.profileText h2
+{
+    color: white;
+    font-size: 1.5em;
+    margin-top: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h3
+{
+    color: white;
+    font-size: 1em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.4em;
+}
+
+.profileText p{
+    color: white;
+    text-align: center;
+}
+
+.contaier .right
+{
+    
+        position: relative;
+        background-color:white;
+        padding: 40px;
+}
+
+.profileText2
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.about
+{
+    margin-bottom: 20px;
+}
+.title2
+{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
